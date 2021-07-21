@@ -1,0 +1,338 @@
+/* Normalise */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default font for the entire project */
+body{
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Logo with initials AD */
+.logo{
+    display: none;
+    font-family: Yellowtail, serif;
+    font-weight: 700;
+    padding: 7px;
+}
+
+/* Navbar */
+.navbar{
+    background-color:#3e3c3d;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    color: #d8d8d8;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list{
+    list-style-type: none;
+    font-size: .9rem;
+}
+
+.nav-list li{
+    display: inline-block;
+    text-align:center;
+    padding-top: 14px;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    height: 46px;
+    
+    
+}
+
+/* Reset link default states and modify*/
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-list li:active{
+    color: black;
+}
+
+.nav-list a, .logo a{
+    -webkit-tap-highlight-color: transparent;
+}
+
+.logo:active{
+    color: black;
+}
+
+/* Introductory section of the website */
+.intro{
+    background-image: url("pozamine3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+}
+
+#name{
+    font-family: "Open Sans", sans-serif;
+    font-size: 4rem;
+    
+}
+
+#name-intro{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2rem;
+    
+}
+
+#name-wrap{
+    display: none;
+    position: relative;
+    top: 38vh;
+    left: 15vw;
+    width: 200px;
+    text-align: center;
+    color: #d8d8d8;
+    border-bottom: 2px solid #d8d8d8;
+}
+
+#secondary-img{
+    display: none;
+}
+
+/* Rules applied to all sections */
+.sect{
+    padding: 30px 50px 30px 50px;
+    text-align:center;
+    color:#897d6d;
+    
+}
+
+.sect-title{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: #b84e52;
+}
+
+/* Mindset list*/
+.mind-list{
+    font-size: 4vw;
+    line-height: 6vw;
+    list-style-position: inside;
+}
+
+/* Education */
+#education{
+    padding: 30px 20px !important;
+}
+
+.ed{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ed-img{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+}
+
+.ed p{
+    font-size: 4vw;
+    padding-top: 2.5vw;
+    justify-content: center;
+}
+
+/* Footer */ 
+.footer{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    border-top: 2px solid #b84e52;
+}
+
+.footer p{
+    color:#b84e52;
+    font-size: 1.5rem;
+}
+
+.footer li{
+    list-style-type: none;
+    float:left;
+    padding: 0 20px;
+}
+
+/* Color the logos */
+.fb{
+    color: #3b5998;
+}
+
+.lkin{
+    color:#0e76a8;
+}
+
+.fa-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* Copyright */
+#copy{
+    text-align: center;
+    color: #897d6d;
+}
+
+/* MEDIA QUERIES */
+
+
+/* Breakpoint at 480px used for navbar optimisation*/
+@media screen and (min-width: 480px){
+    .nav-list li{
+        width: 18vw;
+    }
+
+    .nav-list li:last-child{
+        width: 22vw;
+    }
+
+    .sect-title{
+        font-size: 7vw;
+    }
+}
+
+/* Breakpoint at 768px - starting point for tablet portrait resolutions*/
+@media screen and (min-width: 768px), (orientation: landscape){
+
+    .nav-list li{
+        font-size: 1.2rem;
+        padding-top: 10px;
+    }
+    .intro{
+        background-image: url("background.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+    }
+
+    #secondary-img{
+        display: inline-block;
+        height: 250px;
+        position: absolute;
+        right: 20vw;
+        top: 38vh;
+        border-radius: 50%;
+        filter: brightness(80%);
+    }
+
+    #secondary-img:hover{
+        filter: brightness(100%);
+    }
+
+
+    .sect, #education{
+        padding-left: calc(100px + 5vw) !important;
+        padding-right: calc(100px + 5vw) !important;
+    }
+
+    .sect-title{
+        font-size: 4rem;
+    }
+
+    .mind-list{
+        font-size: 2rem;
+    }
+
+    .ed-img{
+        height: calc(100px + 1vw);
+        width: calc(100px + 1vw);
+    }
+
+    .ed p{
+        padding-top: 2vw;
+        font-size: calc(1rem + 1vw);
+    }
+
+    footer{
+        background-image: url("footer.jpeg");
+    }
+
+    .footer p, #copy{
+        color: #d8d8d8;
+    }
+}
+
+/* Breeakpoint at 1280px - starting point for desktop displays */
+@media screen and (min-width: 1280px){
+
+    .nav-list li:hover, .logo:hover{
+        color: #b84e52;
+    }
+
+    .nav-list li:active, .logo:active{
+        color: black;
+    }
+
+    #name{
+        font-size: 6rem;
+    }
+
+    #name-intro{
+        font-size: 3rem;
+    }
+
+    #name-wrap{
+        width: 300px;
+        position: absolute;
+        top: 30vh;
+    }
+
+    #name-wrap:hover{
+        filter:brightness(200%);
+    }
+
+    #secondary-img{
+        height: 400px;
+        top: 30vh;
+    }
+
+    .sect, #education{
+        padding-left: 300px !important;
+        padding-right: 300px !important;
+    }
+
+    footer{
+        background-image: url("footer.jpeg");
+    }
+
+    .footer p, #copy{
+        color: #d8d8d8;
+    }
+}
+
+/* Special condition for mobile devices in landscape mode */
+@media screen and (orientation: landscape) and (max-height: 450px)
+{
+    #name{
+        font-size: 4rem;
+    }
+
+    #name-intro{
+        font-size: 2rem;
+    }
+
+    #name-wrap{
+        width: 200px;
+        position: absolute;
+        top: 100px;
+    }
+
+    #secondary-img{
+        height: 230px;
+        top: 27vh;
+    }
+}
